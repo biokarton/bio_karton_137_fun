@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>karton_137</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+            animation: glow 2s infinite alternate;
+        }
+        
+        .btn {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .info {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: left;
+            display: none;
+            animation: fadeIn 0.5s ease;
+            border-left: 4px solid #00c6ff;
+        }
+        
+        .info p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .link {
+            color: #00c6ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 8px rgba(0, 198, 255, 0.7);
+        }
+        
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(0, 200, 255, 0.7);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(0, 200, 255, 1), 0 0 30px rgba(0, 100, 255, 0.7);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Привет! Я karton_137</h1>
+        <button class="btn" onclick="toggleInfo()">Информация</button>
+        <div class="info" id="infoBlock">
+            <p>🎮 Я играю на сервере: <strong>ultramc.xyz</strong></p>
+            <p>🌐 Мой сервер: <strong>funsur.20tps.ru</strong></p>
+            <p>💬 Чтобы написать мне:</p>
+            <p>👉 Telegram: <a href="https://t.me/the_one_to" class="link" target="_blank">@the_one_to</a></p>
+            <p>👉 MAX: <span class="link">https://max.ru/u/f9LHodD0cOLQUEsx_Hoc34CEbihJoKnHseBgtOU5o2MXIC1FSySlvZyR0VA#0000</span></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            const infoBlock = document.getElementById('infoBlock');
+            const btn = document.querySelector('.btn');
+            
+            if (infoBlock.style.display === 'block') {
+                infoBlock.style.display = 'none';
+                btn.textContent = 'Информация';
+            } else {
+                infoBlock.style.display = 'block';
+                btn.textContent = 'Скрыть';
+            }
+        }
+    </script>
+</body>
+</html>
